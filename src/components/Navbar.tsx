@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { ContentContainer } from "./ContentContainer";
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
     <div className="sticky top-0 bg-background2 min-h-[4rem] md:min-h-[5rem] flex">
       <ContentContainer className="flex flex-row justify-between items-center px-[1rem]">
-        <a href="/">
+        <Link href="/">
           <Image
             src="/logos/TIPSE-logo-light-transparent.png"
             alt="Technical Interview Preparation for Software Engineers (TIPSE) Logo"
@@ -13,20 +14,20 @@ export const Navbar = () => {
             height={64}
             className="float"
           />
-        </a>
+        </Link>
 
         <ul className="flex flex-row gap-[1rem]">
           <li className="float link">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className="float link">
-            <a href="/topics">Topics</a>
+            <Link href="/topics">Topics</Link>
           </li>
           <li className="float link">
-            <a href="/events">Events</a>
+            <Link href="/events">Events</Link>
           </li>
           <li className="float link">
-            <a href="/contact-us">Contact Us</a>
+            <Link href="/contact-us">Contact Us</Link>
           </li>
         </ul>
       </ContentContainer>
